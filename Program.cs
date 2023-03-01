@@ -487,15 +487,26 @@ namespace raisanenmarkus_classes_First_account
             }
 
         }
-    }
+    }     
 
     internal class Program
     {
         static void Main(string[] args)
         {
+            
+      /*    This exercise is worth 2 sections.
+            Write a program that first reads book information from the user.
+            The details to be asked for each book include the title, the number of pages and the publication year.
+            Entering an empty string as the name of the book ends the reading process.
+            After this the user is asked for what is to be printed.
+            If the user inputs “everything” all the details are printed: the book titles, the numbers of pages, and the publication years.
+            However if the user enters the string “title” only the book titles are printed.
+            If something else than “everything” or “title” is given the program should not print anything.
+            Implement the class Book.
+            Implement the functionality in the Main method.
+            Example of how the program in Main should work.    */
             Book book = new Book();
-
-
+            
             while (true)
             {
                 Console.WriteLine("Name: ");
@@ -535,7 +546,12 @@ namespace raisanenmarkus_classes_First_account
 
             Console.WriteLine("=========================================");
 
-
+   /*       In the exercise template there is a ready made class TelevisionProgram representing a television program.
+            The class has object variables name and duration, a constructor and few methods.
+            Implement a program that begins by reading television programs from the user.
+            When the user inputs an empty string as the name of the program the program stops reading programs.
+            After this the user is queried for a maximum duration.
+            Once the maximum is given the program proceeds to list all the programs whose duration is smaller or equal to the specified maximum duration.  */
             Television_Guide tele=new Television_Guide();
 
             while (true)
@@ -560,7 +576,13 @@ namespace raisanenmarkus_classes_First_account
 
 
 
-
+ /*         The program described here should be implemented in the class Main. Do not modify the class PersonalInformation.
+            After the user has entered the last set of details, by entering an empty first name, exit the repeat statement.
+            Print one empty line here for reading clarity.
+            Then print the collected personal information so that each entered object is printed in the following format.
+            First and last names separated by a space. You don’t print the identification number.
+            An example of the working program is given below.
+            NOTICE! You can and should ask the identification number as a string. */
 
             PersonalInformation per_info = new PersonalInformation();
 
@@ -624,7 +646,36 @@ namespace raisanenmarkus_classes_First_account
            
 
 
-
+            //In this exercise series a class called PaymentCard is created which aims to mimic a cafeteria’s payment process.
+            //The template includes the Program.cs file. You have to create the PaymentCard.cs yourself.
+            //Add a new class to the project called PaymentCard by creating the file mentioned above.
+            //Create the PaymentCard object’s constructor, which is passed the opening balance of the card and
+            //which then stores that balance in the object’s internal variable.
+            //Write the ToString method, which will return the card’s balance in the form “The card has a balance of X euros”.
+            //Here is the template for the PaymentCard.
+            
+            /*    Using Card
+            Expand your answer from the exercise 106 by adding two methods.
+            Method public void EatLunch()
+            Method public void DrinkCoffee()
+            The method EatLunch() should decrease the card’s balance by 10.60 euros.
+            The method DrinkCoffee should decrease the card’s balance by 2.0 euros.
+            The following main program tests the class. */
+            
+            /*   Checking Balance
+            Expand your previous answers, so that when an item is bought the balance is checked.
+            If there is not enough money to buy the balance does not change.
+            NOTICE! See how EatLunch() method did not change the balance when there was not enough money. DrinkCoffee() method still worked as it should.
+            
+                Charging Card
+            Expand your previous answers, so that you can charge money on your card.
+                
+            The purpose of the method is to increase the card’s balance by the amount of money given as a parameter.
+            However the card’s balance may not exceed 150 euros.
+            As such, if the amount to be topped up exceeds this limit the balance should become exactly 150 euros.
+            The following main program tests the class.
+            NOTICE! You cannot add negative money!   */
+    
             PaymentCard card = new PaymentCard(10);
             Console.WriteLine(card.ToString());
             card.EatLunch();
@@ -634,7 +685,8 @@ namespace raisanenmarkus_classes_First_account
             card.AddMoney(200);
             Console.WriteLine(card.ToString());
 
-
+            //Expand the class as follows. When a number is added, count is increased by one.
+            //When a number is added, sum is increased by the number’s value.
             Statistics stat = new Statistics();
             stat.AddNumber(3);
             stat.AddNumber(5);
@@ -645,6 +697,17 @@ namespace raisanenmarkus_classes_First_account
             Console.WriteLine("Sum: " + stat.Sum_numbers());
 
 
+            //Create a class Multiplier as following.
+            //Constructor public Multiplier(int number).
+            //Method public int Multiply(int number) which returns the value number passed to it multiplied by the number provided to the constructor.
+            //You also need to create a instance variable in this exercise. When you call the method Multiply store the changed value into the instance variable!
+            //NOTICE! The value stored in the objects is changed during the first calls! The calculations are actually.
+       /*   3 * 2 = 6
+            4 * 2 = 8
+            6 * 1 = 6
+            8 * 1 = 8
+            8 * 3 = 24           */
+            
             Multiplier multiplier_bullshit = new Multiplier(3);
             Console.WriteLine(multiplier_bullshit.Multiplier_value + " times 2: " + multiplier_bullshit.Multiply(2));
             Console.WriteLine(multiplier_bullshit.Multiplier_value + " times 3: " + multiplier_bullshit.Multiply(3));
@@ -697,6 +760,18 @@ namespace raisanenmarkus_classes_First_account
 
             //This exercise consists of multiple sections. Each section corresponds to one exercise point.
             //The exercise template comes with a partially executed class DecreasingCounter.
+            
+            //SECTION 1: IMPLEMENTATION OF THE DECREMENT() METHOD
+            //Implement the Decrement() method in the class body in such a way that it decrements the value variable of the object.
+            //The main program of the previous example should work to produce the example output.
+            
+            //SECTION 2: THE COUNTER’S VALUE CANNOT BE NEGATIVE
+            //Improve the Decrement() in such a way that the counter’s value never becomes negative. 
+            //This means that if the value of the counter is 0 it cannot be decremented. A conditional statement is useful here.
+            
+            //SECTION 3: RESETTING THE COUNTER VALUE
+            //Create the method public void Reset() for the counter that resets the value of the counter to 0.
+            
             Decreasing_Counter counter = new Decreasing_Counter(1);
             counter.PrintValue();
 
@@ -711,6 +786,11 @@ namespace raisanenmarkus_classes_First_account
             counter.Reset();
             counter.PrintValue();
 
+            //Create the class Debt that has double type instance variables balance and interestRate.
+            //The balance and the interest rate are passed to the constructor as parameters public Debt(double initialBalance, double initialInterestRate).
+            //In addition create the methods public void PrintBalance() and public void WaitOneYear() for the class.
+            //The method PrintBalance prints the current balance and the WaitOneYear method grows the debt amount.
+            //The debt is increased by multiplying the balance by the interest rate.
             Debt mortgage = new Debt(120000, 1.01);
 
             Console.WriteLine(mortgage.PrintBalance());
@@ -728,10 +808,19 @@ namespace raisanenmarkus_classes_First_account
 
             Console.WriteLine(mortgage.PrintBalance());
 
+            //Create a class called Dalmatian. The dalmatian has instance variables string name and int spots.
+            //Both are set in the public Dalmatian(string name, int spots) constructor.
+            //Give the variables ability for get and set Make the variables public rather than private and add { get; set; } on the declaring lines!
+            
             Dalmation spotty = new Dalmation("Spot", 306);
             Console.WriteLine(spotty.Name + "is a very good dog. He has " + spotty.Spots + " darker spots in his fur.");
 
-
+            //Create the class Gauge. The gauge has the variable public int value and a constructor without parameters.
+            //Constructor sets the initial value of the meter variable to 0. The class has following three methods.
+            //Firstly public void Increase() grows the value instance variable’s value by one. It does not grow the value beyond five.
+            //Secondly public void Decrease() decreases the value instance variable’s value by one. It does not decrease the value to negative values.
+            //Thirdly public bool Full() returns True if the instance variable value has the value five. Otherwise, it returns False.
+            //Give the value ability for get and set: Make the value public rather than private, and add { get; set; } on the declaring lines!
             Gauge g = new Gauge();
             while (!g.Full())
             {
