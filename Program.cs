@@ -656,7 +656,10 @@ namespace raisanenmarkus_classes_First_account
 
             Console.WriteLine("==================================");
 
-
+            //The exercise template comes with a ready made class named Account. The Account object represents a bank account that has balance. 
+            //Account that has some amount of money in it. The accounts are used as follows.
+            //Write a program that creates an account with a balance of 100.0, deposits 20.0 in it and finally prints the balance.
+            
             Account Heikki = new Account("Heikki", 1000.00);
             Account Heikkis_Swiss = new Account("Heikki's account in Switerland", 1000000.00);
             Account personal = new Account("Personal", 0);
@@ -672,26 +675,28 @@ namespace raisanenmarkus_classes_First_account
             Console.WriteLine("The balance of Heikki's other account: " + Heikkis_Swiss.Balance());
 
             Console.WriteLine("==================================");
-
-
-
             Heikki.Withdrawal(100);
             personal.Deposit(100);
-
 
             Console.WriteLine("Heikki's account balance: " + Heikki.Balance());
             Console.WriteLine("Personal account balance: " + personal.Balance());
 
-
+            //Create a class named Whistle. Add the variable private string sound to the class.
+            //After that create the constructor public Whistle(string whistleSound), which is used to create a new whistle that’s given a sound.
+            //Create a method public void Sound() which prints out the sound (using Console.WriteLine).
             Whistle duck = new Whistle("Kvaak");
             Whistle rooster = new Whistle("Peef");
             duck.Sound();
             rooster.Sound();
 
-
+            //Create a class Product that represents a store product. The product should have a price (double), quantity (int) and name (string).
+            //The class should have the constructor *public Product(string name, double price, int quantity).*
+            //And a method public void PrintProduct() that prints product information in the following format.
             Product product = new Product("Banana", 1.1, 13);
             product.PrintProduct();
 
+            //This exercise consists of multiple sections. Each section corresponds to one exercise point.
+            //The exercise template comes with a partially executed class DecreasingCounter.
             Decreasing_Counter counter = new Decreasing_Counter(1);
             counter.PrintValue();
 
