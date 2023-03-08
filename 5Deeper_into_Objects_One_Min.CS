@@ -1,4 +1,7 @@
-﻿using System.Timers;
+//Part 5 - Deeper into Objects   https://raisanenmarkus.github.io/csharp/part5/5/
+//EX One Minute
+
+using System.Timers;
 using System.Diagnostics;
 
 namespace deeper_into_Objects
@@ -117,7 +120,8 @@ namespace deeper_into_Objects
             Console.WriteLine("elapsed time: " + my_timer.timer.ElapsedMilliseconds);
 
             Console.WriteLine("#############################");
-
+            
+            
             Timer timer = new Timer();
 
             for (int i = 0; i < 6000; i++)
