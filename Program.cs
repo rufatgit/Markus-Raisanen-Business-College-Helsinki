@@ -1,4 +1,17 @@
-﻿
+/*
+EXERCISE 5-4: Constructor Overload
+The exercise template has a Product class, which represents a product in a shop. Every product has a name, location and weight.
+
+Add the following three constructors to the Product class.
+
+public Product(string name) creates a product with the given name. Its location is set to “shelf” and its weight is set to 1.
+public Product(string name, string location) creates a product with the given name and the given location. Its weight is set to 1.
+public Product(string name, int weight) creates a product with the given name and the given weight. Its location is set to “warehouse”.
+You can test your program with the following code.
+*/
+
+
+
 namespace ex_4_Constructor_overload
 {
     public class Product
